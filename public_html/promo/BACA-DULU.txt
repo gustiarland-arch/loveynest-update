@@ -1,0 +1,7 @@
+SITUS PROMOSI LOVEYNEST v7 (Hansen & Ariana), dirancang ulang.
+Pasang: unggah ZIP ke document root subdomain (mis. from.loveynest.my.id) lalu Extract. index.html harus langsung di folder itu.
+Atau lewat ZIP update 10 (ke public_html/promo/). Tanpa PHP dan database.
+Desain: lembaran warna bertumpuk, huruf Lilita One + Plus Jakarta Sans, garis tebal dan bayangan datar seperti tampilan Arena. Selalu terang, tidak bisa di-zoom.
+Diuji pada lebar 360 sampai 1920 px (iPhone, Android, tablet portrait dan landscape, laptop, desktop): tanpa geseran ke samping, tanpa gambar rusak, target sentuh minimal 44 px.
+Demo pelukan di bagian atas, rekaman layar asli (media/clip), video, musik (dinyalakan pengunjung), dan kartu unduh APK yang membaca /aplikasi/versi.
+Tombol unduh: https://loveynest.my.id/aplikasi/LoveyNest.apk (sama dengan PWA). Ganti alamat aplikasi: APP_URL di app.v8.js.

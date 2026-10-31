@@ -1,0 +1,1 @@
+.nudge-pop[data-v-b11a7d33]{opacity:0;animation:1.1s ease-out both nudge-pop-b11a7d33}@keyframes nudge-pop-b11a7d33{0%{opacity:0;transform:translate(-50%)scale(.5)}20%{opacity:1}to{transform:translate(calc(-50% + var(--dx)), -90px) scale(1.2);opacity:0}}@media (prefers-reduced-motion:reduce){.nudge-pop[data-v-b11a7d33]{display:none}}

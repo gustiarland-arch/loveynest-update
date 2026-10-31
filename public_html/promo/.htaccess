@@ -1,0 +1,27 @@
+# LoveyNest promo site (static). Long cache for fonts/images, short for the page itself.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+AddType font/woff2 .woff2
+AddType image/svg+xml .svg
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
+# Old link /LoveyNest.apk keeps working: it forwards to the newest APK on the app server.
+Redirect 302 /LoveyNest.apk https://loveynest.my.id/aplikasi/LoveyNest.apk
+
+# HTML must always be revalidated; versioned CSS/JS (…v8.css/js) never change, so cache hard.
+<FilesMatch "\.html$">
+  Header set Cache-Control "no-cache, must-revalidate"
+</FilesMatch>
+<FilesMatch "\.v[0-9]+\.(css|js)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
